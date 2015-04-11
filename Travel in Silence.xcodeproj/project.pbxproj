@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA3459151AD934ED001EE03A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3459141AD934ED001EE03A /* AppDelegate.swift */; };
+		AA3459171AD934ED001EE03A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AA3459161AD934ED001EE03A /* GameScene.sks */; };
+		AA3459191AD934ED001EE03A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3459181AD934ED001EE03A /* GameScene.swift */; };
+		AA34591B1AD934ED001EE03A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34591A1AD934ED001EE03A /* GameViewController.swift */; };
+		AA34591E1AD934ED001EE03A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA34591C1AD934ED001EE03A /* Main.storyboard */; };
+		AA3459201AD934ED001EE03A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA34591F1AD934ED001EE03A /* Images.xcassets */; };
+		AA3459231AD934ED001EE03A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3459211AD934ED001EE03A /* LaunchScreen.xib */; };
+		AA34592F1AD934ED001EE03A /* Travel_in_SilenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34592E1AD934ED001EE03A /* Travel_in_SilenceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA3459291AD934ED001EE03A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA3459071AD934ED001EE03A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA34590E1AD934ED001EE03A;
+			remoteInfo = "Travel in Silence";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA34590F1AD934ED001EE03A /* Travel in Silence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel in Silence.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA3459131AD934ED001EE03A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA3459141AD934ED001EE03A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA3459161AD934ED001EE03A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		AA3459181AD934ED001EE03A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		AA34591A1AD934ED001EE03A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AA34591D1AD934ED001EE03A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA34591F1AD934ED001EE03A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AA3459221AD934ED001EE03A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AA3459281AD934ED001EE03A /* Travel in SilenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel in SilenceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA34592D1AD934ED001EE03A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA34592E1AD934ED001EE03A /* Travel_in_SilenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_in_SilenceTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA34590C1AD934ED001EE03A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA3459251AD934ED001EE03A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA3459061AD934ED001EE03A = {
+			isa = PBXGroup;
+			children = (
+				AA3459111AD934ED001EE03A /* Travel in Silence */,
+				AA34592B1AD934ED001EE03A /* Travel in SilenceTests */,
+				AA3459101AD934ED001EE03A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA3459101AD934ED001EE03A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA34590F1AD934ED001EE03A /* Travel in Silence.app */,
+				AA3459281AD934ED001EE03A /* Travel in SilenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA3459111AD934ED001EE03A /* Travel in Silence */ = {
+			isa = PBXGroup;
+			children = (
+				AA3459141AD934ED001EE03A /* AppDelegate.swift */,
+				AA3459161AD934ED001EE03A /* GameScene.sks */,
+				AA3459181AD934ED001EE03A /* GameScene.swift */,
+				AA34591A1AD934ED001EE03A /* GameViewController.swift */,
+				AA34591C1AD934ED001EE03A /* Main.storyboard */,
+				AA34591F1AD934ED001EE03A /* Images.xcassets */,
+				AA3459211AD934ED001EE03A /* LaunchScreen.xib */,
+				AA3459121AD934ED001EE03A /* Supporting Files */,
+			);
+			path = "Travel in Silence";
+			sourceTree = "<group>";
+		};
+		AA3459121AD934ED001EE03A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA3459131AD934ED001EE03A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA34592B1AD934ED001EE03A /* Travel in SilenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA34592E1AD934ED001EE03A /* Travel_in_SilenceTests.swift */,
+				AA34592C1AD934ED001EE03A /* Supporting Files */,
+			);
+			path = "Travel in SilenceTests";
+			sourceTree = "<group>";
+		};
+		AA34592C1AD934ED001EE03A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA34592D1AD934ED001EE03A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA34590E1AD934ED001EE03A /* Travel in Silence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA3459321AD934ED001EE03A /* Build configuration list for PBXNativeTarget "Travel in Silence" */;
+			buildPhases = (
+				AA34590B1AD934ED001EE03A /* Sources */,
+				AA34590C1AD934ED001EE03A /* Frameworks */,
+				AA34590D1AD934ED001EE03A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Travel in Silence";
+			productName = "Travel in Silence";
+			productReference = AA34590F1AD934ED001EE03A /* Travel in Silence.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA3459271AD934ED001EE03A /* Travel in SilenceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA3459351AD934ED001EE03A /* Build configuration list for PBXNativeTarget "Travel in SilenceTests" */;
+			buildPhases = (
+				AA3459241AD934ED001EE03A /* Sources */,
+				AA3459251AD934ED001EE03A /* Frameworks */,
+				AA3459261AD934ED001EE03A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA34592A1AD934ED001EE03A /* PBXTargetDependency */,
+			);
+			name = "Travel in SilenceTests";
+			productName = "Travel in SilenceTests";
+			productReference = AA3459281AD934ED001EE03A /* Travel in SilenceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA3459071AD934ED001EE03A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Steve Clement";
+				TargetAttributes = {
+					AA34590E1AD934ED001EE03A = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					AA3459271AD934ED001EE03A = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = AA34590E1AD934ED001EE03A;
+					};
+				};
+			};
+			buildConfigurationList = AA34590A1AD934ED001EE03A /* Build configuration list for PBXProject "Travel in Silence" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA3459061AD934ED001EE03A;
+			productRefGroup = AA3459101AD934ED001EE03A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA34590E1AD934ED001EE03A /* Travel in Silence */,
+				AA3459271AD934ED001EE03A /* Travel in SilenceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA34590D1AD934ED001EE03A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA3459231AD934ED001EE03A /* LaunchScreen.xib in Resources */,
+				AA3459201AD934ED001EE03A /* Images.xcassets in Resources */,
+				AA3459171AD934ED001EE03A /* GameScene.sks in Resources */,
+				AA34591E1AD934ED001EE03A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA3459261AD934ED001EE03A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA34590B1AD934ED001EE03A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA3459191AD934ED001EE03A /* GameScene.swift in Sources */,
+				AA34591B1AD934ED001EE03A /* GameViewController.swift in Sources */,
+				AA3459151AD934ED001EE03A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA3459241AD934ED001EE03A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA34592F1AD934ED001EE03A /* Travel_in_SilenceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA34592A1AD934ED001EE03A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA34590E1AD934ED001EE03A /* Travel in Silence */;
+			targetProxy = AA3459291AD934ED001EE03A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA34591C1AD934ED001EE03A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA34591D1AD934ED001EE03A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA3459211AD934ED001EE03A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA3459221AD934ED001EE03A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA3459301AD934ED001EE03A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA3459311AD934ED001EE03A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA3459331AD934ED001EE03A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Travel in Silence/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AA3459341AD934ED001EE03A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Travel in Silence/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AA3459361AD934ED001EE03A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Travel in SilenceTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travel in Silence.app/Travel in Silence";
+			};
+			name = Debug;
+		};
+		AA3459371AD934ED001EE03A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Travel in SilenceTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travel in Silence.app/Travel in Silence";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA34590A1AD934ED001EE03A /* Build configuration list for PBXProject "Travel in Silence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA3459301AD934ED001EE03A /* Debug */,
+				AA3459311AD934ED001EE03A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA3459321AD934ED001EE03A /* Build configuration list for PBXNativeTarget "Travel in Silence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA3459331AD934ED001EE03A /* Debug */,
+				AA3459341AD934ED001EE03A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AA3459351AD934ED001EE03A /* Build configuration list for PBXNativeTarget "Travel in SilenceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA3459361AD934ED001EE03A /* Debug */,
+				AA3459371AD934ED001EE03A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA3459071AD934ED001EE03A /* Project object */;
+}
