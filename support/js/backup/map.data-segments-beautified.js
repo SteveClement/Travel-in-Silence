@@ -1,8 +1,7 @@
 /*
   map.data-segments.js - copyright 2013, C-Services
-  
+
   Contains the segment DATA for the CFL
-  
 */
 
 var gaLigneInfo = {
