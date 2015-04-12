@@ -8,6 +8,10 @@
 
 import UIKit
 
-class adViewController: NSObject {
-   
+class adViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+     // Load Image here
+    }
 }

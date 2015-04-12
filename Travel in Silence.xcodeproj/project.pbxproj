@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA1B17371ADAE3FC00C26CE5 /* l10segments.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AA1B17341ADAE3FC00C26CE5 /* l10segments.gpx */; };
+		AA1B17381ADAE3FC00C26CE5 /* l50segments.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AA1B17351ADAE3FC00C26CE5 /* l50segments.gpx */; };
+		AA1B17391ADAE3FC00C26CE5 /* l60segments.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AA1B17361ADAE3FC00C26CE5 /* l60segments.gpx */; };
+		AA29EBB81AD99969003E274B /* stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA29EBB71AD99969003E274B /* stations.plist */; };
+		AA29EBBA1AD99A3E003E274B /* adViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29EBB91AD99A3E003E274B /* adViewController.swift */; };
+		AA29EBBC1AD99BD4003E274B /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29EBBB1AD99BD4003E274B /* menuViewController.swift */; };
+		AA29EBBE1AD99C94003E274B /* gameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29EBBD1AD99C94003E274B /* gameOverViewController.swift */; };
+		AA29EBC01AD99CA4003E274B /* pauseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29EBBF1AD99CA4003E274B /* pauseMenuViewController.swift */; };
+		AA2C25241AD9AFE6009503EE /* CoreLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C25231AD9AFE6009503EE /* CoreLocationController.swift */; };
 		AA3459151AD934ED001EE03A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3459141AD934ED001EE03A /* AppDelegate.swift */; };
 		AA3459171AD934ED001EE03A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AA3459161AD934ED001EE03A /* GameScene.sks */; };
 		AA3459191AD934ED001EE03A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3459181AD934ED001EE03A /* GameScene.swift */; };
@@ -15,6 +24,7 @@
 		AA3459201AD934ED001EE03A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA34591F1AD934ED001EE03A /* Images.xcassets */; };
 		AA3459231AD934ED001EE03A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3459211AD934ED001EE03A /* LaunchScreen.xib */; };
 		AA34592F1AD934ED001EE03A /* Travel_in_SilenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34592E1AD934ED001EE03A /* Travel_in_SilenceTests.swift */; };
+		AA976A1C1AD9EED70018E79C /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA976A1B1AD9EED70018E79C /* testViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +38,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA1B17341ADAE3FC00C26CE5 /* l10segments.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = l10segments.gpx; sourceTree = "<group>"; };
+		AA1B17351ADAE3FC00C26CE5 /* l50segments.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = l50segments.gpx; sourceTree = "<group>"; };
+		AA1B17361ADAE3FC00C26CE5 /* l60segments.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = l60segments.gpx; sourceTree = "<group>"; };
+		AA29EBB71AD99969003E274B /* stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = stations.plist; sourceTree = "<group>"; };
+		AA29EBB91AD99A3E003E274B /* adViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adViewController.swift; sourceTree = "<group>"; };
+		AA29EBBB1AD99BD4003E274B /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
+		AA29EBBD1AD99C94003E274B /* gameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameOverViewController.swift; sourceTree = "<group>"; };
+		AA29EBBF1AD99CA4003E274B /* pauseMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pauseMenuViewController.swift; sourceTree = "<group>"; };
+		AA2C25231AD9AFE6009503EE /* CoreLocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLocationController.swift; sourceTree = "<group>"; };
 		AA34590F1AD934ED001EE03A /* Travel in Silence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel in Silence.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3459131AD934ED001EE03A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3459141AD934ED001EE03A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +59,7 @@
 		AA3459281AD934ED001EE03A /* Travel in SilenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel in SilenceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA34592D1AD934ED001EE03A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA34592E1AD934ED001EE03A /* Travel_in_SilenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_in_SilenceTests.swift; sourceTree = "<group>"; };
+		AA976A1B1AD9EED70018E79C /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +80,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA1B173A1ADAF79500C26CE5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA34591A1AD934ED001EE03A /* GameViewController.swift */,
+				AA29EBB91AD99A3E003E274B /* adViewController.swift */,
+				AA29EBBB1AD99BD4003E274B /* menuViewController.swift */,
+				AA29EBBD1AD99C94003E274B /* gameOverViewController.swift */,
+				AA29EBBF1AD99CA4003E274B /* pauseMenuViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		AA3459061AD934ED001EE03A = {
 			isa = PBXGroup;
 			children = (
@@ -84,10 +116,12 @@
 				AA3459141AD934ED001EE03A /* AppDelegate.swift */,
 				AA3459161AD934ED001EE03A /* GameScene.sks */,
 				AA3459181AD934ED001EE03A /* GameScene.swift */,
-				AA34591A1AD934ED001EE03A /* GameViewController.swift */,
+				AA1B173A1ADAF79500C26CE5 /* ViewControllers */,
+				AA2C25231AD9AFE6009503EE /* CoreLocationController.swift */,
+				AA976A1B1AD9EED70018E79C /* testViewController.swift */,
 				AA34591C1AD934ED001EE03A /* Main.storyboard */,
-				AA34591F1AD934ED001EE03A /* Images.xcassets */,
 				AA3459211AD934ED001EE03A /* LaunchScreen.xib */,
+				AA34591F1AD934ED001EE03A /* Images.xcassets */,
 				AA3459121AD934ED001EE03A /* Supporting Files */,
 			);
 			path = "Travel in Silence";
@@ -96,6 +130,10 @@
 		AA3459121AD934ED001EE03A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA1B17341ADAE3FC00C26CE5 /* l10segments.gpx */,
+				AA1B17351ADAE3FC00C26CE5 /* l50segments.gpx */,
+				AA1B17361ADAE3FC00C26CE5 /* l60segments.gpx */,
+				AA29EBB71AD99969003E274B /* stations.plist */,
 				AA3459131AD934ED001EE03A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -199,7 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3459231AD934ED001EE03A /* LaunchScreen.xib in Resources */,
+				AA29EBB81AD99969003E274B /* stations.plist in Resources */,
 				AA3459201AD934ED001EE03A /* Images.xcassets in Resources */,
+				AA1B17371ADAE3FC00C26CE5 /* l10segments.gpx in Resources */,
+				AA1B17391ADAE3FC00C26CE5 /* l60segments.gpx in Resources */,
+				AA1B17381ADAE3FC00C26CE5 /* l50segments.gpx in Resources */,
 				AA3459171AD934ED001EE03A /* GameScene.sks in Resources */,
 				AA34591E1AD934ED001EE03A /* Main.storyboard in Resources */,
 			);
@@ -219,9 +261,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA29EBBE1AD99C94003E274B /* gameOverViewController.swift in Sources */,
 				AA3459191AD934ED001EE03A /* GameScene.swift in Sources */,
+				AA29EBBA1AD99A3E003E274B /* adViewController.swift in Sources */,
+				AA976A1C1AD9EED70018E79C /* testViewController.swift in Sources */,
 				AA34591B1AD934ED001EE03A /* GameViewController.swift in Sources */,
 				AA3459151AD934ED001EE03A /* AppDelegate.swift in Sources */,
+				AA2C25241AD9AFE6009503EE /* CoreLocationController.swift in Sources */,
+				AA29EBC01AD99CA4003E274B /* pauseMenuViewController.swift in Sources */,
+				AA29EBBC1AD99BD4003E274B /* menuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +467,7 @@
 				AA3459341AD934ED001EE03A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA3459351AD934ED001EE03A /* Build configuration list for PBXNativeTarget "Travel in SilenceTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +476,7 @@
 				AA3459371AD934ED001EE03A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
