@@ -9,9 +9,10 @@
 import UIKit
 
 class adViewController: UIViewController {
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     // Load Image here
     }
 }
