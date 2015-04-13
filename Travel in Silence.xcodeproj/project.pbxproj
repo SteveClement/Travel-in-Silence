@@ -80,16 +80,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA1B173A1ADAF79500C26CE5 /* ViewControllers */ = {
+		AA1B173A1ADAF79500C26CE5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				AA34591A1AD934ED001EE03A /* GameViewController.swift */,
 				AA29EBB91AD99A3E003E274B /* adViewController.swift */,
+				AA2C25231AD9AFE6009503EE /* CoreLocationController.swift */,
 				AA29EBBB1AD99BD4003E274B /* menuViewController.swift */,
 				AA29EBBD1AD99C94003E274B /* gameOverViewController.swift */,
 				AA29EBBF1AD99CA4003E274B /* pauseMenuViewController.swift */,
+				AA976A1B1AD9EED70018E79C /* testViewController.swift */,
 			);
-			name = ViewControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		AA3459061AD934ED001EE03A = {
@@ -113,15 +115,9 @@
 		AA3459111AD934ED001EE03A /* Travel in Silence */ = {
 			isa = PBXGroup;
 			children = (
+				AA3995FC1ADC041F003688C6 /* Views */,
 				AA3995F91ADBC3C5003688C6 /* Models */,
-				AA3459141AD934ED001EE03A /* AppDelegate.swift */,
-				AA3459161AD934ED001EE03A /* GameScene.sks */,
-				AA3459181AD934ED001EE03A /* GameScene.swift */,
-				AA1B173A1ADAF79500C26CE5 /* ViewControllers */,
-				AA2C25231AD9AFE6009503EE /* CoreLocationController.swift */,
-				AA976A1B1AD9EED70018E79C /* testViewController.swift */,
-				AA34591C1AD934ED001EE03A /* Main.storyboard */,
-				AA3459211AD934ED001EE03A /* LaunchScreen.xib */,
+				AA1B173A1ADAF79500C26CE5 /* Controllers */,
 				AA34591F1AD934ED001EE03A /* Images.xcassets */,
 				AA3459121AD934ED001EE03A /* Supporting Files */,
 			);
@@ -160,8 +156,20 @@
 		AA3995F91ADBC3C5003688C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AA3459141AD934ED001EE03A /* AppDelegate.swift */,
+				AA3459181AD934ED001EE03A /* GameScene.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		AA3995FC1ADC041F003688C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA3459161AD934ED001EE03A /* GameScene.sks */,
+				AA34591C1AD934ED001EE03A /* Main.storyboard */,
+				AA3459211AD934ED001EE03A /* LaunchScreen.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,7 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Travel in Silence/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,7 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Travel in Silence/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
