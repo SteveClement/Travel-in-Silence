@@ -24,6 +24,7 @@
 		AA3459201AD934ED001EE03A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA34591F1AD934ED001EE03A /* Images.xcassets */; };
 		AA3459231AD934ED001EE03A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3459211AD934ED001EE03A /* LaunchScreen.xib */; };
 		AA34592F1AD934ED001EE03A /* Travel_in_SilenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34592E1AD934ED001EE03A /* Travel_in_SilenceTests.swift */; };
+		AA8304A31ADCF76E005B27F6 /* lines.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8304A21ADCF76E005B27F6 /* lines.plist */; };
 		AA976A1C1AD9EED70018E79C /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA976A1B1AD9EED70018E79C /* testViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		AA3459281AD934ED001EE03A /* Travel in SilenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel in SilenceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA34592D1AD934ED001EE03A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA34592E1AD934ED001EE03A /* Travel_in_SilenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_in_SilenceTests.swift; sourceTree = "<group>"; };
+		AA8304A21ADCF76E005B27F6 /* lines.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lines.plist; sourceTree = "<group>"; };
 		AA976A1B1AD9EED70018E79C /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 				AA1B17361ADAE3FC00C26CE5 /* l60segments.gpx */,
 				AA29EBB71AD99969003E274B /* stations.plist */,
 				AA3459131AD934ED001EE03A /* Info.plist */,
+				AA8304A21ADCF76E005B27F6 /* lines.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				AA1B17371ADAE3FC00C26CE5 /* l10segments.gpx in Resources */,
 				AA1B17391ADAE3FC00C26CE5 /* l60segments.gpx in Resources */,
 				AA1B17381ADAE3FC00C26CE5 /* l50segments.gpx in Resources */,
+				AA8304A31ADCF76E005B27F6 /* lines.plist in Resources */,
 				AA3459171AD934ED001EE03A /* GameScene.sks in Resources */,
 				AA34591E1AD934ED001EE03A /* Main.storyboard in Resources */,
 			);

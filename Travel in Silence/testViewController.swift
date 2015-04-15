@@ -27,6 +27,9 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
         
+        if debug {
+            NSLog("\(shortVersionString)")
+        }
         //Setup our Map View
         theMap.delegate = self
         //theMap.mapType = MKMapType.Satellite
@@ -39,12 +42,16 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     }
 
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
-        theLabel.text = "\(locations[0])"
+        theLabel.text = "\(locations[0]) v\(shortVersionString)"
         myLocations.append(locations[0] as! CLLocation)
         let spanX = 0.077
         let spanY = 0.077
         var newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
         theMap.setRegion(newRegion, animated: true)
+
+        if debug {
+            NSLog("myLocations before if: \(myLocations.count)")
+        }
         
         if (myLocations.count > 1){
             var sourceIndex = myLocations.count - 1
@@ -54,9 +61,14 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             let c2 = myLocations[destinationIndex].coordinate
             
             var a = [c1, c2]
-            NSLog("()")
             var polyline = MKPolyline(coordinates: &a, count: a.count)
+            if debug {
+                NSLog("UserLocation: \(theMap.userLocation.coordinate)")
+                NSLog("polyline point count: \(polyline.pointCount)")
+            }
             theMap.addOverlay(polyline)
+            
+            //MKCircle
         }
         
     }

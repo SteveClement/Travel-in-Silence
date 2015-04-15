@@ -15,6 +15,7 @@ class CoreLocationController : NSObject, CLLocationManagerDelegate {
     
     override init() {
         super.init()
+        
         self.locationManager.delegate = self
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.distanceFilter  = 300 // Must move at least 50 meters
