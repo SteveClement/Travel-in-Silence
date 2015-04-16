@@ -18,8 +18,13 @@ class GameScene: SKScene {
     
     override func didMoveToView(view: SKView) {
 
+        // Delay of the train in seconds
         var delay = 5
+        
+        // This is a game, hence the need of a score variable
         var score = 31337
+        
+        // declare the score as an NSNumber so we know it is a number
         var scoreNSNumber = score as NSNumber
 
         // align labels
