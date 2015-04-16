@@ -15,7 +15,7 @@ class GameScene: SKScene {
     let delayLabel = SKLabelNode(fontNamed: "MyriadPro-Regular")
     let scoreLabel = SKLabelNode(fontNamed: "MyriadPro-Regular")
     let versionLabel = SKLabelNode(fontNamed: "MyriadPro-Regular")
-
+    
     override func didMoveToView(view: SKView) {
 
         var delay = 5

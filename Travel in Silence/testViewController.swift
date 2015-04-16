@@ -18,6 +18,9 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     var manager:CLLocationManager!
     var myLocations: [CLLocation] = []
 
+    let myLoc = CLLocation(latitude: 49.3, longitude: 5.7)
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Setup our Location Manager
