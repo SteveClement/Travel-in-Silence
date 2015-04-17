@@ -26,7 +26,7 @@ var active = l50segments
 Object.keys(gaLigneInfo).forEach(function (segment) {
     if ($.inArray(parseInt(segment.match(/\d+/)[0]), active) != -1) {
         for (var i=0; i < gaLigneInfo[segment].length; i++) {
-            console.log('    <wpt lat="' + gaLigneInfo[segment][i]['lat'] + '" lon="' + gaLigneInfo[segment][0]['lon'] + '">')
+            console.log('    <wpt lat="' + gaLigneInfo[segment][i]['lat'] + '" lon="' + gaLigneInfo[segment][i]['lon'] + '">')
             console.log("         <name>" + gaLigneInfo[segment][i]['id'] + "</name>")
             console.log("    </wpt>")
         };
