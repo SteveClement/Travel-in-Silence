@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Steve Clement. All rights reserved.
 //
 
+// This is a testViewController to get to know the CoreLocation framework
+
 import UIKit
 import MapKit
 import CoreLocation
@@ -17,10 +19,18 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     var manager:CLLocationManager!
     var myLocations: [CLLocation] = []
+    var stationsDict: NSDictionary?
 
-    let myLoc = CLLocation(latitude: 49.3, longitude: 5.7)
-
+    // Static test co-ordinates
     
+    // Lux, gare8200100, 6.134206, 49.600070
+    //let gareLuxembourg = ["Luxembourg", CLLocation(latitude: 49.600070, longitude: 6.134206)]
+    let gareLuxembourg: [CLLocation] = [CLLocation(latitude: 49.600070, longitude: 6.134206)]
+    // Mersch, gare8200110, 6.110320, 49.752019
+    let gareMersch = ["Mersch", CLLocation(latitude: 49.752019, longitude: 6.110320)]
+    // Bettembourg, gare8200603, 6.101424, 49.516457
+    let gareBettembourg = ["Bettembourg", CLLocation(latitude: 49.516457, longitude: 6.101424)]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //Setup our Location Manager
@@ -31,8 +41,26 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         manager.startUpdatingLocation()
         
         if debug {
-            NSLog("\(shortVersionString)")
+            NSLog("Running v.\(shortVersionString)")
         }
+        
+        if let path = NSBundle.mainBundle().pathForResource("stations", ofType: "plist") {
+            stationsDict = NSDictionary(contentsOfFile: path)
+        }
+        
+        if let stationDict = stationsDict {
+            println("type: \(type(stationDict))")
+            println("count: \(stationDict.count)")
+            println("allKeys: \(stationDict.allKeys)")
+            var valKey: AnyObject? = stationDict.valueForKey("gare8270730")?.valueForKey("Position")
+            var valArray: Array = [ valKey ]
+            println("Contents off arr: \(valArray[0])")
+            println("value for key gare8270730: \(valKey!)")
+            println("type for vkey vkey: \(type(valKey!))")
+            println("allKeys: \(stationDict.allKeys)")
+
+        }
+
         //Setup our Map View
         theMap.delegate = self
         //theMap.mapType = MKMapType.Satellite
@@ -47,6 +75,10 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
         theLabel.text = "\(locations[0]) v\(shortVersionString)"
         myLocations.append(locations[0] as! CLLocation)
+        println("Type gareLux: \(type(gareLuxembourg[0]))")
+        println("Valu gareLux: \(gareLuxembourg[0])")
+        var distance = locations[0].distanceFromLocation(gareLuxembourg[0])
+        println("Location from GdL: \(distance) meter")
         let spanX = 0.077
         let spanY = 0.077
         var newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))

@@ -19,7 +19,7 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
 
         // Delay of the train in seconds
-        var delay = 5
+        var delay = 300
         
         // This is a game, hence the need of a score variable
         var score = 31337
@@ -40,7 +40,7 @@ class GameScene: SKScene {
         //delayLabel.position = CGPoint(x:512.0, y:384)
 
         // Fill labels with text and set font sizes
-        delayLabel.text = "Delay: \(delay) min"
+        delayLabel.text = "Delay: \(delay/60) min"
         scoreLabel.text = scoreNSNumber.stringValue
         
         delayLabel.fontSize = 23
@@ -69,6 +69,7 @@ class GameScene: SKScene {
         /* Called when a touch begins */
 
         for touch in (touches as! Set<UITouch>) {
+            
             let location = touch.locationInNode(self)
             
             let sprite = SKSpriteNode(imageNamed:"play")

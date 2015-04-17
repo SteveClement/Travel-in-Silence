@@ -9,10 +9,12 @@
 import UIKit
 
 let appInfo = NSBundle.mainBundle().infoDictionary as! Dictionary<String,AnyObject>
+
+// Make the version string available across the App
 let shortVersionString = appInfo["CFBundleShortVersionString"] as! String
 let bundleVersion      = appInfo["CFBundleVersion"] as! String
 
-// enable global debugging to NSLog
+// enable global debugging to NSLog()/println()
 let debug = true
 
 @UIApplicationMain
