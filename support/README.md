@@ -22,8 +22,8 @@ ToDo
 ----
 
 
-- Write a parser to generate a GPX-file from the 'map.data-segments.js' file.
+- [X] Write a parser to generate a GPX-file from the 'map.data-segments.js' file.
 This can be used to test the journey in Xcode.
 
-- Add the co-ordinates of the Stations on the Nancy-Luxembourg track
-- Add the co-ordinates of the Stations on the Thionville-Esch-Luxembourg track
+- [ ] Add the co-ordinates of the Stations on the Nancy-Luxembourg track
+- [ ] Add the co-ordinates of the Stations on the Thionville-Esch-Luxembourg track
