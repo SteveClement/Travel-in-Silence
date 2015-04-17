@@ -40,6 +40,41 @@
 			remoteGlobalIDString = AA34590E1AD934ED001EE03A;
 			remoteInfo = "Travel in Silence";
 		};
+		AA7786FD1AE13C4A003FEE5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA7786F51AE13C4A003FEE5B /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C1F1944AA1A00993175;
+			remoteInfo = SwifterDemoiOS;
+		};
+		AA7786FF1AE13C4A003FEE5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA7786F51AE13C4A003FEE5B /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F50EE1944A5AB00894629;
+			remoteInfo = SwifteriOS;
+		};
+		AA7787011AE13C4A003FEE5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA7786F51AE13C4A003FEE5B /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F51131944A61D00894629;
+			remoteInfo = SwifterMac;
+		};
+		AA7787031AE13C4A003FEE5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA7786F51AE13C4A003FEE5B /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C471944AECB00993175;
+			remoteInfo = SwifterDemoMac;
+		};
+		AA7787051AE13C4A003FEE5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA7786F51AE13C4A003FEE5B /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C5A1944AECB00993175;
+			remoteInfo = SwifterDemoMacTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +102,7 @@
 		AA7786EE1AE0FD5E003FEE5B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AA7786F01AE0FD87003FEE5B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		AA7786F21AE0FD98003FEE5B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		AA7786F51AE13C4A003FEE5B /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = ../../Desktop/code/Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
 		AA8304A21ADCF76E005B27F6 /* lines.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lines.plist; sourceTree = "<group>"; };
 		AA976A1B1AD9EED70018E79C /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		AACF53961AE0335D00B11BD2 /* myUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myUtils.swift; sourceTree = "<group>"; };
@@ -110,6 +146,7 @@
 		AA3459061AD934ED001EE03A = {
 			isa = PBXGroup;
 			children = (
+				AA7786F51AE13C4A003FEE5B /* Swifter.xcodeproj */,
 				AA7786F21AE0FD98003FEE5B /* StoreKit.framework */,
 				AA7786F01AE0FD87003FEE5B /* GameKit.framework */,
 				AA7786EE1AE0FD5E003FEE5B /* MapKit.framework */,
@@ -198,6 +235,18 @@
 			name = Toolbox;
 			sourceTree = "<group>";
 		};
+		AA7786F61AE13C4A003FEE5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA7786FE1AE13C4A003FEE5B /* SwifterDemoiOS.app */,
+				AA7787001AE13C4A003FEE5B /* SwifteriOS.framework */,
+				AA7787021AE13C4A003FEE5B /* SwifterMac.framework */,
+				AA7787041AE13C4A003FEE5B /* SwifterDemoMac.app */,
+				AA7787061AE13C4A003FEE5B /* SwifterDemoMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,6 +326,12 @@
 			mainGroup = AA3459061AD934ED001EE03A;
 			productRefGroup = AA3459101AD934ED001EE03A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AA7786F61AE13C4A003FEE5B /* Products */;
+					ProjectRef = AA7786F51AE13C4A003FEE5B /* Swifter.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AA34590E1AD934ED001EE03A /* Travel in Silence */,
@@ -284,6 +339,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AA7786FE1AE13C4A003FEE5B /* SwifterDemoiOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoiOS.app;
+			remoteRef = AA7786FD1AE13C4A003FEE5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA7787001AE13C4A003FEE5B /* SwifteriOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifteriOS.framework;
+			remoteRef = AA7786FF1AE13C4A003FEE5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA7787021AE13C4A003FEE5B /* SwifterMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifterMac.framework;
+			remoteRef = AA7787011AE13C4A003FEE5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA7787041AE13C4A003FEE5B /* SwifterDemoMac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoMac.app;
+			remoteRef = AA7787031AE13C4A003FEE5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA7787061AE13C4A003FEE5B /* SwifterDemoMacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifterDemoMacTests.xctest;
+			remoteRef = AA7787051AE13C4A003FEE5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AA34590D1AD934ED001EE03A /* Resources */ = {
