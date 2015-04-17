@@ -12,11 +12,13 @@ Hacking
 
 To get beautified versions of the JavaScript install js-beautify
 
+```
 pip install jsbeautifier
 
 wget -qO- http://www.cfl.lu/espaces/voyageurs/en/_vti_bin/CFLServices/CFLClientService.svc/GetMapDataGares/en |js-beautify -i > map.data-gares-beautified.js
+```
 
-Copies for backup are provided.
+Copies for backup are provided [here](js/backup).
 
 ToDo
 ----
