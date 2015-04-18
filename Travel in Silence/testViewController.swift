@@ -11,6 +11,9 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Accounts
+import Social
+import SwifteriOS
 
 class testViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
@@ -20,7 +23,9 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     var manager:CLLocationManager!
     var myLocations: [CLLocation] = []
     var stationsDict: NSDictionary?
-
+    var swifter: Swifter
+    let useACAccount = true
+    
     // Static test co-ordinates
     
     // Lux, gare8200100, 6.134206, 49.600070
@@ -31,6 +36,11 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     // Bettembourg, gare8200603, 6.101424, 49.516457
     let gareBettembourg = ["Bettembourg", CLLocation(latitude: 49.516457, longitude: 6.101424)]
 
+    required init(coder aDecoder: NSCoder) {
+        self.swifter = Swifter(consumerKey: "RErEmzj7ijDkJr60ayE2gjSHT", consumerSecret: "SbS0CHk11oJdALARa7NDik0nty4pXvAxdt7aj0R5y1gNzWaNEx")
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Setup our Location Manager
@@ -44,6 +54,7 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             NSLog("Running v.\(shortVersionString)")
         }
         
+    
         if let path = NSBundle.mainBundle().pathForResource("stations", ofType: "plist") {
             stationsDict = NSDictionary(contentsOfFile: path)
         }
@@ -85,9 +96,49 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         let spanY = 0.077
         var newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
         theMap.setRegion(newRegion, animated: true)
+        let failureHandler: ((NSError) -> Void) = {
+            error in
+            
+            self.alertWithTitle("Error", message: error.localizedDescription)
+        }
 
         if debug {
             NSLog("myLocations before if: \(myLocations.count)")
+        }
+        if useACAccount {
+            let accountStore = ACAccountStore()
+            let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+            
+            // Prompt the user for permission to their twitter account stored in the phone's settings
+            accountStore.requestAccessToAccountsWithType(accountType, options: nil) {
+                granted, error in
+                
+                if granted {
+                    let twitterAccounts = accountStore.accountsWithAccountType(accountType)
+                    
+                    if twitterAccounts?.count == 0
+                    {
+                        self.alertWithTitle("Error", message: "There are no Twitter accounts configured. You can add or create a Twitter account in Settings.")
+                    }
+                    else {
+                        let twitterAccount = twitterAccounts[0] as! ACAccount
+                        self.swifter = Swifter(account: twitterAccount)
+                        //self.fetchTwitterHomeStream()
+                    }
+                }
+                else {
+                    self.alertWithTitle("Error", message: error.localizedDescription)
+                }
+            }
+        }
+        else {
+            swifter.authorizeWithCallbackURL(NSURL(string: "swifter://success")!, success: {
+                accessToken, response in
+                
+                //self.fetchTwitterHomeStream()
+                
+                },failure: failureHandler
+            )
         }
         
         if (myLocations.count > 1){
@@ -126,7 +177,13 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
         
     }
-    
+
+    func alertWithTitle(title: String, message: String) {
+        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
     /*
     // MARK: - Navigation
 

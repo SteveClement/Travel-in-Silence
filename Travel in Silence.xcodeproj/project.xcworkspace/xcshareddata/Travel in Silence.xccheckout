@@ -12,6 +12,8 @@
 	<dict>
 		<key>4DED2F24801303DEB7A75637D9B0EDF3F1C39A12</key>
 		<string>github.com:SteveClement/Travel-in-Silence.git</string>
+		<key>72E8AEF8201D0465EAD5BE5475E77330EA7EC0CD</key>
+		<string>github.com:mattdonnelly/Swifter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Travel in Silence.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>4DED2F24801303DEB7A75637D9B0EDF3F1C39A12</key>
 		<string>../..</string>
+		<key>72E8AEF8201D0465EAD5BE5475E77330EA7EC0CD</key>
+		<string>../../../../Desktop/code/Swifter</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:SteveClement/Travel-in-Silence.git</string>
@@ -28,6 +32,14 @@
 	<string>4DED2F24801303DEB7A75637D9B0EDF3F1C39A12</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>72E8AEF8201D0465EAD5BE5475E77330EA7EC0CD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Swifter</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

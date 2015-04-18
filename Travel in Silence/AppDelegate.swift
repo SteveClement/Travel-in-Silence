@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwifteriOS
 
 let appInfo = NSBundle.mainBundle().infoDictionary as! Dictionary<String,AnyObject>
 
@@ -17,18 +18,19 @@ let bundleVersion      = appInfo["CFBundleVersion"] as! String
 // enable global debugging to NSLog()/println()
 let debug = true
 
-//let swifter = Swifter(consumerkey: "O5kVHNKAeKSa04uQyFO3pA", consumerSecret: "iHQPxu08oQLguMRcKifMHc9kRMkfhT25p829iHwKg")
-
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var coreLocationController:CoreLocationController?
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, openURL url: NSURL, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Swifter integration
+        Swifter.handleOpenURL(url)
+        
+        // Setup coreLocationController for any Location related things
         self.coreLocationController     = CoreLocationController()
         
         return true
