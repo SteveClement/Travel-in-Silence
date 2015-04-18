@@ -78,6 +78,7 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         theMap.delegate = self
         //theMap.mapType = MKMapType.Satellite
         theMap.showsUserLocation = true
+
     }
 
     override func didReceiveMemoryWarning() {
