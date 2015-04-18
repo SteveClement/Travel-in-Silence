@@ -106,6 +106,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA02EABB1AE2677000BACA20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA7786F21AE0FD98003FEE5B /* StoreKit.framework */,
+				AA7786F01AE0FD87003FEE5B /* GameKit.framework */,
+				AA7786EE1AE0FD5E003FEE5B /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA1B173A1ADAF79500C26CE5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,9 +133,7 @@
 		AA3459061AD934ED001EE03A = {
 			isa = PBXGroup;
 			children = (
-				AA7786F21AE0FD98003FEE5B /* StoreKit.framework */,
-				AA7786F01AE0FD87003FEE5B /* GameKit.framework */,
-				AA7786EE1AE0FD5E003FEE5B /* MapKit.framework */,
+				AA02EABB1AE2677000BACA20 /* Frameworks */,
 				AA3459111AD934ED001EE03A /* Travel in Silence */,
 				AA34592B1AD934ED001EE03A /* Travel in SilenceTests */,
 				AA3459101AD934ED001EE03A /* Products */,
@@ -144,12 +152,12 @@
 		AA3459111AD934ED001EE03A /* Travel in Silence */ = {
 			isa = PBXGroup;
 			children = (
+				AA3459121AD934ED001EE03A /* Supporting Files */,
 				AA7786F41AE10D8E003FEE5B /* Toolbox */,
 				AA3995FC1ADC041F003688C6 /* Views */,
 				AA3995F91ADBC3C5003688C6 /* Models */,
 				AA1B173A1ADAF79500C26CE5 /* Controllers */,
 				AA34591F1AD934ED001EE03A /* Images.xcassets */,
-				AA3459121AD934ED001EE03A /* Supporting Files */,
 			);
 			path = "Travel in Silence";
 			sourceTree = "<group>";

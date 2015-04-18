@@ -17,3 +17,4 @@ func type(myVar: AnyObject) -> AnyObject {
     let leType = _stdlib_getDemangledTypeName(myVar)
     return leType
 }
+

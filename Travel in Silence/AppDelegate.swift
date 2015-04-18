@@ -17,7 +17,7 @@ let bundleVersion      = appInfo["CFBundleVersion"] as! String
 // enable global debugging to NSLog()/println()
 let debug = true
 
-let swifter = Swifter(consumerkey: "O5kVHNKAeKSa04uQyFO3pA", consumerSecret: "iHQPxu08oQLguMRcKifMHc9kRMkfhT25p829iHwKg")
+//let swifter = Swifter(consumerkey: "O5kVHNKAeKSa04uQyFO3pA", consumerSecret: "iHQPxu08oQLguMRcKifMHc9kRMkfhT25p829iHwKg")
 
 
 @UIApplicationMain

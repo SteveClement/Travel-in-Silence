@@ -48,6 +48,8 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             stationsDict = NSDictionary(contentsOfFile: path)
         }
         
+        listPlist(stationsDict!)
+        
         if let stationDict = stationsDict {
             println("type: \(type(stationDict))")
             println("count: \(stationDict.count)")
@@ -119,6 +121,12 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         return nil
     }
 
+    func listPlist(dict: NSDictionary) {
+        var matches: [String:[String:[String]]] = [:]
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 
