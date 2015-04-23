@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Steve Clement. All rights reserved.
 //
 
-// This is a testViewController to get to know the CoreLocation framework
+// This is a testViewController to get to know the CoreLocation framework, SwifteriOS and playing around with the allmighty pLists
 
 import UIKit
 import MapKit
@@ -20,9 +20,12 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     @IBOutlet weak var theLabel: UILabel!
     @IBOutlet weak var theMap: MKMapView!
     
+    // CoreLocation variables
     var manager:CLLocationManager!
     var myLocations: [CLLocation] = []
+    // main Station dictionary
     var stationsDict: NSDictionary?
+    // Swifter variables
     var swifter: Swifter
     let useACAccount = true
     
@@ -49,31 +52,19 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
+       
+        // path of our stations property list
+        if let pathStationsPlist = NSBundle.mainBundle().pathForResource("stations", ofType: "plist") {
+            // dictionary with plist contents
+            stationsDict = NSDictionary(contentsOfFile: pathStationsPlist)
+        }
         
         if debug {
             NSLog("Running v.\(shortVersionString)")
+            // plist debug
+            printStations(stationsDict)
         }
         
-    
-        if let path = NSBundle.mainBundle().pathForResource("stations", ofType: "plist") {
-            stationsDict = NSDictionary(contentsOfFile: path)
-        }
-        
-        listPlist(stationsDict!)
-        
-        if let stationDict = stationsDict {
-            println("type: \(type(stationDict))")
-            println("count: \(stationDict.count)")
-            println("allKeys: \(stationDict.allKeys)")
-            var valKey: AnyObject? = stationDict.valueForKey("gare8270730")?.valueForKey("Position")
-            var valArray: Array = [ valKey ]
-            println("Contents off arr: \(valArray[0])")
-            println("value for key gare8270730: \(valKey!)")
-            println("type for vkey vkey: \(type(valKey!))")
-            println("allKeys: \(stationDict.allKeys)")
-
-        }
-
         //Setup our Map View
         theMap.delegate = self
         //theMap.mapType = MKMapType.Satellite
@@ -89,10 +80,12 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
         theLabel.text = "\(locations[0]) v\(shortVersionString)"
         myLocations.append(locations[0] as! CLLocation)
-        println("Type gareLux: \(type(gareLuxembourg[0]))")
+        
         println("Valu gareLux: \(gareLuxembourg[0])")
         var distance = locations[0].distanceFromLocation(gareLuxembourg[0])
         println("Location from GdL: \(distance) meter")
+
+        // This determines the map zoom factor
         let spanX = 0.077
         let spanY = 0.077
         var newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
@@ -173,10 +166,19 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         return nil
     }
 
-    func listPlist(dict: NSDictionary) {
-        var matches: [String:[String:[String]]] = [:]
-        
-        
+    func printStations(dict: NSDictionary?) {
+        // Put all stations from the dictionary into a
+        let stations = dict?.allKeys as! [String]
+        println("No. Stations: \(dict!.count)")
+        println("All Stations: \(dict!.allKeys)")
+        if let stationDict = dict {
+            for station in stations {
+                let stationName: AnyObject? = stationDict.valueForKey(station)?.valueForKey("Name")
+                let stationPosition = stationsDict![station]!.valueForKey("Position") as! NSArray
+                println("\(station) aka. \(stationName!) can be found on lat: \(stationPosition[1]) lon: \(stationPosition[0])")
+            }
+        }
+       
     }
 
     func alertWithTitle(title: String, message: String) {

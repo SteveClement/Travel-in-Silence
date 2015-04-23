@@ -7,7 +7,7 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>031ECB47-7D03-4775-8924-315CFB9C710A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Travel in Silence</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4DED2F24801303DEB7A75637D9B0EDF3F1C39A12</key>
@@ -16,7 +16,7 @@
 		<string>github.com:mattdonnelly/Swifter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Travel in Silence.xcodeproj</string>
+	<string>Travel in Silence.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4DED2F24801303DEB7A75637D9B0EDF3F1C39A12</key>

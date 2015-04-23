@@ -52,9 +52,6 @@ class CoreLocationController : NSObject, CLLocationManagerDelegate {
         let location = locations.last as! CLLocation
         
         println("didUpdateLocations:  \(location.coordinate.latitude), \(location.coordinate.longitude)")
-        //let nextCheckpoint = [  ] as! CLLocation
-//        CLLocationDistance distance = [locA distanceFromLocation:locB];
-
         
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, e) -> Void in

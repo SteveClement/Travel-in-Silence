@@ -20,19 +20,15 @@ let debug = true
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
+    // Setup coreLocationController
     var coreLocationController:CoreLocationController?
     
     func application(application: UIApplication, openURL url: NSURL, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        
         // Swifter integration
         Swifter.handleOpenURL(url)
-        
         // Setup coreLocationController for any Location related things
         self.coreLocationController     = CoreLocationController()
-        
         return true
     }
 
