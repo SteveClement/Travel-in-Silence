@@ -1,7 +1,6 @@
 $.getScript("http://www.cfl.lu/_layouts/15/CFL/gmaps/js/map.data-segments.js", function(){
-console.log('<?xml version="1.0"?>')
-console.log('<gpx version="1.1" creator="Xcode">')
-
+console.log('<?xml version="1.0" encoding="UTF-8"?>')
+console.log('<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="TravelInSilence Support Scripts">')
 
 var mapVoyageursResources = {
     l10Name: "Luxembourg - Troisvierges - Gouvy",
