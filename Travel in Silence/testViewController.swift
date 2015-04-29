@@ -28,6 +28,9 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     // Swifter variables
     var swifter: Swifter
     let useACAccount = true
+    let useTwitter = false
+    
+    var iDev = DeviceMonitor()
     
     // Static test co-ordinates
     
@@ -61,6 +64,7 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
         if debug {
             NSLog("Running v.\(shortVersionString)")
+            println("Current battery level: \(iDev.batteryLevel()*100)%")
             // plist debug
             printStations(stationsDict)
         }
@@ -99,40 +103,43 @@ class testViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         if debug {
             NSLog("myLocations before if: \(myLocations.count)")
         }
-        if useACAccount {
-            let accountStore = ACAccountStore()
-            let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
-            
-            // Prompt the user for permission to their twitter account stored in the phone's settings
-            accountStore.requestAccessToAccountsWithType(accountType, options: nil) {
-                granted, error in
+        
+        if useTwitter {
+            if useACAccount {
+                let accountStore = ACAccountStore()
+                let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
                 
-                if granted {
-                    let twitterAccounts = accountStore.accountsWithAccountType(accountType)
+                // Prompt the user for permission to their twitter account stored in the phone's settings
+                accountStore.requestAccessToAccountsWithType(accountType, options: nil) {
+                    granted, error in
                     
-                    if twitterAccounts?.count == 0
-                    {
-                        self.alertWithTitle("Error", message: "There are no Twitter accounts configured. You can add or create a Twitter account in Settings.")
+                    if granted {
+                        let twitterAccounts = accountStore.accountsWithAccountType(accountType)
+                        
+                        if twitterAccounts?.count == 0
+                        {
+                            self.alertWithTitle("Error", message: "There are no Twitter accounts configured. You can add or create a Twitter account in Settings.")
+                        }
+                        else {
+                            let twitterAccount = twitterAccounts[0] as! ACAccount
+                            self.swifter = Swifter(account: twitterAccount)
+                            //self.fetchTwitterHomeStream()
+                        }
                     }
                     else {
-                        let twitterAccount = twitterAccounts[0] as! ACAccount
-                        self.swifter = Swifter(account: twitterAccount)
-                        //self.fetchTwitterHomeStream()
+                        self.alertWithTitle("Error", message: error.localizedDescription)
                     }
                 }
-                else {
-                    self.alertWithTitle("Error", message: error.localizedDescription)
-                }
             }
-        }
-        else {
-            swifter.authorizeWithCallbackURL(NSURL(string: "swifter://success")!, success: {
-                accessToken, response in
-                
-                //self.fetchTwitterHomeStream()
-                
-                },failure: failureHandler
-            )
+            else {
+                swifter.authorizeWithCallbackURL(NSURL(string: "swifter://success")!, success: {
+                    accessToken, response in
+                    
+                    //self.fetchTwitterHomeStream()
+                    
+                    },failure: failureHandler
+                )
+            }
         }
         
         if (myLocations.count > 1){
