@@ -9,7 +9,7 @@
 import UIKit
 import SwifteriOS
 
-let appInfo = NSBundle.mainBundle().infoDictionary as! Dictionary<String,AnyObject>
+let appInfo = NSBundle.mainBundle().infoDictionary as Dictionary<String,AnyObject>!
 
 // Make the version string available across the App
 let shortVersionString = appInfo["CFBundleShortVersionString"] as! String
