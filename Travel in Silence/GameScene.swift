@@ -19,13 +19,13 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
 
         // Delay of the train in seconds
-        var delay = 300
+        let delay = 300
         
         // This is a game, hence the need of a score variable
-        var score = 31337
+        let score = 31337
         
         // declare the score as an NSNumber so we know it is a number
-        var scoreNSNumber = score as NSNumber
+        let scoreNSNumber = score as NSNumber
 
         // align labels
         delayLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
@@ -65,10 +65,10 @@ class GameScene: SKScene {
     }
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
 
-        for touch in (touches as! Set<UITouch>) {
+        for touch in (touches ) {
             
             let location = touch.locationInNode(self)
             
@@ -88,7 +88,7 @@ class GameScene: SKScene {
 
     }
 
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
             if pauseButton.containsPoint(location) {

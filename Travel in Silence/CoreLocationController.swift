@@ -23,42 +23,42 @@ class CoreLocationController : NSObject, CLLocationManagerDelegate {
         self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters // Accurate within ten meters
     }
     
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        println("didChangeAuthorizationStatus")
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        print("didChangeAuthorizationStatus")
         
         switch status {
         case .NotDetermined:
-            println(".NotDetermined")
+            print(".NotDetermined")
             break
             
         case .AuthorizedAlways:
-            println(".Authorized")
+            print(".Authorized")
             self.locationManager.startUpdatingLocation()
             break
             
         case .Denied:
-            println(".Denied")
+            print(".Denied")
             break
             
         default:
-            println("Unhandled authorization status")
+            print("Unhandled authorization status")
             break
             
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let location = locations.last as! CLLocation
+        let location = locations.last as CLLocation!
         
-        println("didUpdateLocations:  \(location.coordinate.latitude), \(location.coordinate.longitude)")
+        print("didUpdateLocations:  \(location.coordinate.latitude), \(location.coordinate.longitude)")
         
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, e) -> Void in
             if let error = e {
-                println("Error:  \(e.localizedDescription)")
+                print("Error:  \(e!.localizedDescription)")
             } else {
-                let placemark = placemarks.last as! CLPlacemark
+                let placemark = placemarks!.last as CLPlacemark!
                 
                 let userInfo = [
                     "city":     placemark.locality,
@@ -66,9 +66,9 @@ class CoreLocationController : NSObject, CLLocationManagerDelegate {
                     "country":  placemark.country
                 ]
                 
-                NSNotificationCenter.defaultCenter().postNotificationName("LOCATION_AVAILABLE", object: nil, userInfo: userInfo)
+                //NSNotificationCenter.defaultCenter().postNotificationName("LOCATION_AVAILABLE", object: nil, userInfo: userInfo)
                 
-                println("Location:  \(userInfo)")
+                print("Location:  \(userInfo)")
                 
             }
         })
